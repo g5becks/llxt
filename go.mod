@@ -9,7 +9,10 @@ tool (
 	github.com/goreleaser/goreleaser/v2
 )
 
-require github.com/samber/oops v1.21.0
+require (
+	github.com/samber/oops v1.21.0
+	resty.dev/v3 v3.0.0-beta.6
+)
 
 require (
 	4d63.com/gocheckcompilerdirectives v1.3.0 // indirect
