@@ -25,4 +25,4 @@ tasks:
   build:
     desc: Build the project
     cmds:
-      - go build -o bin/llxt .
+      - go build -o bin/llxt ./cmd/llxt
