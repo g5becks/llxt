@@ -10,6 +10,7 @@ tool (
 )
 
 require (
+	github.com/jedib0t/go-pretty/v6 v6.7.8
 	github.com/samber/oops v1.21.0
 	resty.dev/v3 v3.0.0-beta.6
 )
