@@ -8,4 +8,6 @@ pre-commit:
       run: go tool github.com/go-task/task/v3/cmd/task test
 
 commit-msg:
-  skip: true
+  commands:
+    commit-lint:
+      run: ./scripts/commit-msg-lint.sh {1}
