@@ -1,0 +1,15 @@
+# lefthook.yml
+pre-commit:
+  parallel: true
+  commands:
+    lint:
+      run: go tool github.com/go-task/task/v3/cmd/task lint
+    test:
+      run: go tool github.com/go-task/task/v3/cmd/task test
+
+commit-msg:
+  commands:
+    commit-lint:
+      # Check the commit message format using gommit
+      # gommit check message "$(cat {1})"
+      run: go tool github.com/antham/gommit check message "$(cat {1})"

@@ -1,0 +1,28 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+  GOLANGCI_LINT: github.com/golangci/golangci-lint/v2/cmd/golangci-lint
+
+tasks:
+  default:
+    cmds:
+      - echo "{{.GREETING}}"
+    silent: true
+
+  lint:
+    desc: Run golangci-lint
+    cmds:
+      - go tool {{.GOLANGCI_LINT}} run
+
+  test:
+    desc: Run tests
+    cmds:
+      - go test ./...
+
+  build:
+    desc: Build the project
+    cmds:
+      - go build -o bin/llxt .
